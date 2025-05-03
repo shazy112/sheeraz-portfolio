@@ -1,87 +1,402 @@
-<!-- Updated Contact Section -->
-<section class="p-10 mt-10 bg-white dark:bg-gray-800 rounded-lg shadow-md mx-auto max-w-4xl">
-  <h2 class="text-3xl font-bold text-center mb-8 text-blue-700 dark:text-teal-400">
-    <span class="border-b-4 border-blue-500 dark:border-teal-400 pb-2">Contact Me</span>
-  </h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sheeraz Ahmed | Senior Mobile Engineer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    .typing-animation {
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typing 3.5s steps(40, end);
+    }
+    .skill-pill {
+      @apply bg-blue-100 dark:bg-blue-800 text-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm;
+    }
+    .project-card {
+      @apply bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow;
+    }
+  </style>
+</head>
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300">
 
-  <!-- Prominent Personal Details -->
-  <div class="bg-blue-50 dark:bg-gray-700 p-6 rounded-lg mb-8 flex flex-col md:flex-row gap-6 items-center">
-    <div class="flex-1">
-      <h3 class="text-xl font-semibold mb-2 text-blue-800 dark:text-white">Sheeraz Ahmed</h3>
-      <p class="flex items-center gap-2 mb-1">
-        <svg class="w-5 h-5 text-blue-600 dark:text-teal-300" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
-        <a href="mailto:ahmedsheeraz015@gmail.com" class="hover:underline text-blue-600 dark:text-teal-300">ahmedsheeraz015@gmail.com</a>
-      </p>
-      <p class="flex items-center gap-2">
-        <svg class="w-5 h-5 text-blue-600 dark:text-teal-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
-        <a href="tel:+19294019299" class="hover:underline text-blue-600 dark:text-teal-300">(929) 401-9299</a>
+  <!-- Hero Section -->
+  <section class="py-20 bg-gradient-to-r from-blue-500 to-teal-500 dark:from-blue-700 dark:to-teal-700 text-center text-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <img src="images/profile.jpg" alt="Sheeraz Ahmed" class="w-40 h-40 mx-auto rounded-full border-4 border-white dark:border-gray-300 mb-6">
+      <h2 class="text-4xl font-bold mb-4">Senior Mobile Application Engineer</h2>
+      <p class="text-xl mb-6">iOS & React Native Specialist | 6+ Years Experience | 10M+ Users</p>
+      <div class="flex justify-center space-x-4">
+        <a href="https://github.com" class="text-white hover:text-blue-200"><i class="fab fa-github fa-2x"></i></a>
+        <a href="https://medium.com" class="text-white hover:text-blue-200"><i class="fab fa-medium fa-2x"></i></a>
+        <a href="https://linkedin.com" class="text-white hover:text-blue-200"><i class="fab fa-linkedin fa-2x"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Summary Section -->
+  <section class="py-16 px-4 max-w-6xl mx-auto">
+    <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+      <h2 class="text-3xl font-bold text-blue-700 dark:text-teal-400 mb-6">Professional Summary</h2>
+      <p class="text-lg text-gray-700 dark:text-gray-300">
+        As a Senior Mobile Software Developer with six-plus years of industry experience, my responsibilities revolve around feature development, unit testing, and optimizing existing features for seamless performance. My adaptability enables me to thrive independently and within diverse team environments, thus making valuable contributions to the achievement of mobile project success.
       </p>
     </div>
-    <div class="flex gap-4">
-      <a href="https://github.com/yourusername" target="_blank" class="bg-blue-100 dark:bg-gray-600 p-3 rounded-full hover:bg-blue-200 dark:hover:bg-gray-500 transition">
-        <svg class="w-6 h-6 text-blue-700 dark:text-white" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
-      </a>
-      <a href="https://linkedin.com/in/sheeraz-ahmed-b72916102" target="_blank" class="bg-blue-100 dark:bg-gray-600 p-3 rounded-full hover:bg-blue-200 dark:hover:bg-gray-500 transition">
-        <svg class="w-6 h-6 text-blue-700 dark:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-      </a>
+  </section>
+
+  <!-- Professional Experience -->
+  <section class="py-16 px-4 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-12 text-center border-b-4 border-blue-500 dark:border-teal-400 pb-2 inline-block">Professional Experience</h2>
+    
+    <!-- GM Experience -->
+    <div class="mb-16 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+      <div class="flex justify-between items-start">
+        <div>
+          <h3 class="text-2xl font-bold text-blue-700 dark:text-teal-400">General Motors</h3>
+          <p class="text-lg mb-4">Senior Mobile Application Developer | Sep 2023 - Present | Austin, TX</p>
+        </div>
+        <img src="images/gm-logo.png" alt="GM Logo" class="h-12">
+      </div>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+        <li><strong>Led key components</strong> of the new myChevrolet app rollout, <strong>achieving</strong> 15% faster load times and <strong>boosting</strong> App Store rating from 4.2 to 4.7 through performance optimizations</li>
+        <li><strong>Architected and implemented</strong> security framework for remote vehicle commands, <strong>preventing</strong> 30% of potential unauthorized access attempts and <strong>reducing</strong> related support tickets by 25%</li>
+        <li><strong>Spearheaded</strong> development of real-time health alerts system, <strong>resulting in</strong> 20% higher user engagement and 15% increase in proactive service appointments</li>
+        <li><strong>Co-developed</strong> Smart Driver 2.0 and Connected Camera features that <strong>drove</strong> $10M+ incremental revenue within first quarter post-launch</li>
+        <li><strong>Led</strong> React Native migration initiative that <strong>accelerated</strong> feature delivery by 40% while <strong>reducing</strong> codebase size by 35%</li>
+        <li><strong>Served as</strong> technical lead during on-call rotations, <strong>maintaining</strong> 99.9% app uptime and <strong>reducing</strong> critical issue resolution time from 8hr to 2hr average</li>
+      </ul>
     </div>
+    
+    <!-- Detroit Labs Experience -->
+    <div class="mb-16 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+      <div class="flex justify-between items-start">
+        <div>
+          <h3 class="text-2xl font-bold text-blue-700 dark:text-teal-400">Detroit Labs (at General Motors)</h3>
+          <p class="text-lg mb-4">Senior Mobile Application Developer | Mar 2022 - Sep 2023 | NYC, NY</p>
+        </div>
+        <img src="images/detroit-labs-logo.png" alt="Detroit Labs Logo" class="h-12">
+      </div>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+        <li><strong>Delivered</strong> features as senior developer for General Motors through Detroit Labs partnership, <strong>contributing to</strong> 3 major app releases used by 5M+ active users</li>
+    <li><strong>Mastered</strong> React Native within 4 weeks, then <strong>led development</strong> of 2 key features that improved user retention by 15%</li>
+    <li><strong>Collaborated</strong> with product and QA teams to <strong>reduce</strong> critical bugs by 40% and <strong>accelerate</strong> release cycles by 25% through improved processes</li>
+    <li><strong>Mentored</strong> 3 junior developers, <strong>enabling</strong> their transition to independent contributors 50% faster than average onboarding timelines</li>
+    <li><strong>Facilitated</strong> knowledge sharing sessions that <strong>improved</strong> team productivity by 20% and <strong>reduced</strong> code review turnaround time by 35%</li>
+      </ul>
+    </div>
+    
+   <!-- AYM Commerce Experience -->
+<div class="mb-16 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+    <div class="flex justify-between items-start">
+      <div>
+        <h3 class="text-2xl font-bold text-blue-700 dark:text-teal-400">AYM Commerce</h3>
+        <p class="text-lg mb-4">Senior iOS Developer | Dec 2019 - Feb 2022 | Dubai, UAE</p>
+      </div>
+      <img src="images/aym-logo.png" alt="AYM Logo" class="h-12">
+    </div>
+    <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+      <li><strong>Developed</strong> core OCR features for P&G's Pampers Club app, <strong>increasing</strong> scan success rate by 35% and <strong>reducing</strong> processing time from 5s to 1.2s</li>
+      <li><strong>Scaled</strong> app infrastructure to support 10M+ users across 15 countries, <strong>maintaining</strong> 99.8% uptime during peak usage periods</li>
+      <li><strong>Led</strong> 5-person team to deliver IoT companion app in 3 months, <strong>contributing to</strong> 28% increase in product sales through enhanced marketing capabilities</li>
+      <li><strong>Created IoT recycling app</strong> using an external SDK that <strong>connected 110+ smart bins across europe</strong>, driving <strong>33% increase in recycling</strong> and <strong>8K+ daily active users</strong> through gamified rewards system</li>    </ul>
   </div>
+    
+    <!-- Invision Solutions Experience -->
+    <div class="mb-16 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+        <h3 class="text-2xl font-bold text-blue-700 dark:text-teal-400">Invision Solutions</h3>
+        <p class="text-lg mb-4">iOS Developer | Jul 2017 - Dec 2019 | Karachi, Pakistan</p>
+        <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <li><strong>Delivered</strong> 12+ iOS applications as full-stack mobile developer, <strong>contributing to</strong> $3M+ in combined client revenue</li>
+          <li><strong>Bridged</strong> communication between cross-functional teams, <strong>reducing</strong> project delivery timelines by 30% through improved coordination</li>
+          <li><strong>Architected</strong> reusable UI components library <strong>saving</strong> 200+ development hours across projects</li>
+          <li><strong>Implemented</strong> CI/CD pipeline <strong>reducing</strong> build/test cycle time from 25 minutes to under 8 minutes</li>
+        </ul>
+      </div>
+    
+    <!-- Wizsoft Solutions Experience -->
+    <div class="mb-16 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+        <h3 class="text-2xl font-bold text-blue-700 dark:text-teal-400">Wizsoft Solutions</h3>
+        <p class="text-lg mb-4">iOS Developer | Mar 2016 - Jul 2017 | Karachi, Pakistan</p>
+        <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <li><strong>Developed</strong> POS system deployed in 50+ restaurants across Saudi Arabia, <strong>processing</strong> 15K+ daily transactions with 99.95% reliability</li>
+          <li><strong>Created</strong> Kitchen Display System (KDS) that <strong>reduced</strong> order errors by 60% and <strong>improved</strong> kitchen throughput by 25%</li>
+          <li><strong>Integrated</strong> thermal printer functionality <strong>reducing</strong> receipt printing time from 8s to 2.5s per order</li>
+          <li><strong>Optimized</strong> order synchronization between POS and KDS, <strong>eliminating</strong> 95% of duplicate order issues</li>
+        </ul>
+      </div>
+  </section>
 
-  <!-- Enhanced Form -->
-  <form 
-    name="contact" 
-    method="POST" 
-    netlify
-    data-netlify-recaptcha="true"
-    class="space-y-6"
-  >
-    <input type="hidden" name="form-name" value="contact">
+  <!-- Skills Section -->
+  <section class="py-16 px-4 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-12 text-center border-b-4 border-blue-500 dark:border-teal-400 pb-2 inline-block">Technical Skills</h2>
+    <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div>
+          <h4 class="text-lg font-semibold text-blue-700 dark:text-teal-400 mb-2">Languages</h4>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill">Swift</span>
+            <span class="skill-pill">Objective-C</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">TypeScript</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-blue-700 dark:text-teal-400 mb-2">Frameworks & Libraries</h4>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill">React Native</span>
+            <span class="skill-pill">React Redux</span>
+            <span class="skill-pill">Redux Toolkit</span>
+            <span class="skill-pill">Firebase</span>
+            <span class="skill-pill">Braze</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-blue-700 dark:text-teal-400 mb-2">Tools</h4>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill">Xcode</span>
+            <span class="skill-pill">VS Code</span>
+            <span class="skill-pill">Git</span>
+            <span class="skill-pill">CocoaPods</span>
+            <span class="skill-pill">SwiftPM</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-blue-700 dark:text-teal-400 mb-2">Architecture</h4>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill">MVVM</span>
+            <span class="skill-pill">MVC</span>
+            <span class="skill-pill">MVP</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-blue-700 dark:text-teal-400 mb-2">Testing</h4>
+          <div class="flex flex-wrap gap-2">
 
-    <!-- Name Field -->
-    <div>
-      <label for="name" class="block text-lg font-medium text-gray-700 dark:text-gray-300 mb-2">Your Name</label>
-      <input 
-        type="text" 
-        id="name" 
-        name="name" 
-        required
-        class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-teal-400 bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition"
-        placeholder="John Doe"
-      >
+            <span class="skill-pill">Unit Testing(Jest, XCTest)</span>
+            <span class="skill-pill">AB Testing</span>
+            <span class="skill-pill">Feature Flags</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-blue-700 dark:text-teal-400 mb-2">DevOps & Agile</h4>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill">CI/CD</span>
+            <span class="skill-pill">SAFe Agile</span>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Email Field -->
-    <div>
-      <label for="email" class="block text-lg font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
-      <input 
-        type="email" 
-        id="email" 
-        name="email" 
-        required
-        class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-teal-400 bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition"
-        placeholder="your@email.com"
-      >
+  <!-- Projects Section -->
+  <section class="py-16 px-4 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-12 text-center border-b-4 border-blue-500 dark:border-teal-400 pb-2 inline-block">Key Projects</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="project-card">
+        <h3 class="text-xl font-bold text-blue-700 dark:text-teal-400 mb-2">
+          <a 
+            href="https://apps.apple.com/us/app/mychevrolet/id398596699" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="underline text-blue-700 dark:text-teal-400 hover:text-blue-500 dark:hover:text-teal-200 transition-colors duration-200 cursor-pointer"
+          >
+            myChevrolet
+          </a>
+        </h3>
+        <p class="text-gray-600 dark:text-gray-400">General Motors vehicle management app</p>
+      </div>
+      <div class="project-card">
+        <h3 class="text-xl font-bold text-blue-700 dark:text-teal-400 mb-2">
+          <a 
+            href="https://apps.apple.com/us/app/pampers-rewards/id1224627026" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="underline text-blue-700 dark:text-teal-400 hover:text-blue-500 dark:hover:text-teal-200 transition-colors duration-200 cursor-pointer"
+          >
+            Pampers Club
+          </a>
+        </h3>
+        <p class="text-gray-600 dark:text-gray-400">P&G's baby care rewards app with 10M+ users</p>
+      </div>
+      <div class="project-card">
+        <h3 class="text-xl font-bold text-blue-700 dark:text-teal-400 mb-2">
+          <a 
+            href="https://www.fabianhupfauf.com/pampers-recycling" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="underline text-blue-700 dark:text-teal-400 hover:text-blue-500 dark:hover:text-teal-200 transition-colors duration-200 cursor-pointer"
+          >
+            Pampers Recycle
+          </a>
+        </h3>
+        <p class="text-gray-600 dark:text-gray-400">Sustainability initiative app</p>
+      </div>
+      <div class="project-card">
+        <h3 class="text-xl font-bold text-blue-700 dark:text-teal-400 mb-2">
+          <a 
+            href="https://www.fnd.io/#/ca/ios-universal-app/1299628311-pillway-by-simpill-health-group-inc" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="underline text-blue-700 dark:text-teal-400 hover:text-blue-500 dark:hover:text-teal-200 transition-colors duration-200 cursor-pointer"
+          >
+            Pillway
+          </a>
+        </h3>
+        <p class="text-gray-600 dark:text-gray-400">Pharmacy management and delivery app</p>
+      </div>
+      <div class="project-card">
+        <h3 class="text-xl font-bold text-blue-700 dark:text-teal-400 mb-2">
+          <a 
+            href="https://www.fnd.io/#/sa/ipad-app/1504063016-marn-kitchen-display-by-marn-businesses-" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="underline text-blue-700 dark:text-teal-400 hover:text-blue-500 dark:hover:text-teal-200 transition-colors duration-200 cursor-pointer"
+          >
+            KDS
+          </a>
+        </h3>
+        <p class="text-gray-600 dark:text-gray-400">Kitchen Display System for restaurants</p>
+      </div>
+      <div class="project-card">
+        <h3 class="text-xl font-bold text-blue-700 dark:text-teal-400 mb-2">
+          <a 
+            href="https://www.fnd.io/#/sa/ipad-app/1495693049-marn-by-marn-businesses-technologies" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="underline text-blue-700 dark:text-teal-400 hover:text-blue-500 dark:hover:text-teal-200 transition-colors duration-200 cursor-pointer"
+          >
+            POS System
+          </a>
+        </h3>
+        <p class="text-gray-600 dark:text-gray-400">Restaurant point-of-sale solution</p>
+      </div>
     </div>
+  </section>
 
-    <!-- Message Field -->
-    <div>
-      <label for="message" class="block text-lg font-medium text-gray-700 dark:text-gray-300 mb-2">Your Message</label>
-      <textarea 
-        id="message" 
-        name="message" 
-        rows="5" 
-        required
-        class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-teal-400 bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition"
-        placeholder="Hello Sheeraz, I'd like to discuss..."
-      ></textarea>
+  <!-- Education Section -->
+  <section class="py-16 px-4 max-w-6xl mx-auto">
+    <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+      <h2 class="text-3xl font-bold text-blue-700 dark:text-teal-400 mb-6">Education</h2>
+      <div>
+        <h3 class="text-xl font-bold">BS Computer Engineering</h3>
+        <p class="text-lg">Sir Syed University of Engineering and Technology | 2012-2015</p>
+      </div>
     </div>
+  </section>
 
-    <!-- reCAPTCHA -->
-    <div class="mt-6">
-      <div data-netlify-recaptcha="true"></div>
+  <!-- Contact Section -->
+  <section class="py-16 px-4 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-12 text-center border-b-4 border-blue-500 dark:border-teal-400 pb-2 inline-block">Get In Touch</h2>
+    
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Contact Card -->
+      <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+        <h3 class="text-2xl font-bold text-blue-700 dark:text-teal-400 mb-6">Contact Information</h3>
+        
+        <div class="space-y-6">
+          <div class="flex items-center gap-4">
+            <div class="bg-blue-100 dark:bg-blue-900 w-12 h-12 rounded-full flex items-center justify-center">
+              <i class="fas fa-envelope text-blue-600 dark:text-blue-300"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Email</p>
+              <a href="mailto:ahmedsheeraz015@gmail.com" class="text-lg font-medium text-blue-600 dark:text-teal-300 hover:underline">ahmedsheeraz015@gmail.com</a>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-4">
+            <div class="bg-green-100 dark:bg-green-900 w-12 h-12 rounded-full flex items-center justify-center">
+              <i class="fas fa-phone text-green-600 dark:text-green-300"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Phone</p>
+              <a href="tel:9294019299" class="text-lg font-medium text-green-600 dark:text-teal-300 hover:underline">(929) 401-9299</a>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-4">
+            <div class="bg-purple-100 dark:bg-purple-900 w-12 h-12 rounded-full flex items-center justify-center">
+              <i class="fas fa-map-marker-alt text-purple-600 dark:text-purple-300"></i>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Location</p>
+              <p class="text-lg font-medium text-gray-800 dark:text-gray-200">Round Rock, TX</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+        <h3 class="text-2xl font-bold text-blue-700 dark:text-teal-400 mb-6">Send Me a Message</h3>
+        
+        <form name="contact" method="POST" netlify data-netlify-recaptcha="true" class="space-y-6">
+          <input type="hidden" name="form-name" value="contact">
+          
+          <div>
+            <label for="name" class="block text-lg font-medium text-gray-700 dark:text-gray-300 mb-2">Your Name</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              required
+              class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-teal-400 bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition"
+              placeholder="John Doe"
+            >
+          </div>
+          
+          <div>
+            <label for="email" class="block text-lg font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required
+              class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-teal-400 bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition"
+              placeholder="your@email.com"
+            >
+          </div>
+          
+          <div>
+            <label for="message" class="block text-lg font-medium text-gray-700 dark:text-gray-300 mb-2">Your Message</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="5" 
+              required
+              class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-teal-400 bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition"
+              placeholder="Hello Sheeraz, I'd like to discuss..."
+            ></textarea>
+          </div>
+          
+          <div class="mt-6">
+            <div data-netlify-recaptcha="true"></div>
+          </div>
+          
+          <button 
+            type="submit" 
+            class="w-full bg-blue-600 hover:bg-blue-700 dark:bg-teal-600 dark:hover:bg-teal-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
     </div>
+  </section>
 
-    <!-- Submit Button -->
-    <button 
-      type="submit" 
-      class="w-full bg-blue-600 hover:bg-blue-700 dark:bg-teal-600 dark:hover:bg-teal-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 transform
+  <footer class="py-8 bg-blue-900 dark:bg-teal-800 text-white text-center">
+    <div class="flex justify-center space-x-6 mb-4">
+      <a href="https://github.com" class="text-white hover:text-blue-200"><i class="fab fa-github fa-2x"></i></a>
+      <a href="https://medium.com" class="text-white hover:text-blue-200"><i class="fab fa-medium fa-2x"></i></a>
+      <a href="https://linkedin.com" class="text-white hover:text-blue-200"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+    <p>&copy; 2025 Sheeraz Ahmed. All rights reserved.</p>
+  </footer>
+</body>
+</html>
